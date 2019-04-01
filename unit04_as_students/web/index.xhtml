@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Unit 04 Assignment</title>
+    </h:head>
+    <h:body>
+       TBD
+       <h2>Car Page</h2>
+       <h:form>
+       <h:selectOneMenu value="#{carSelectionBean.carMenu}">
+        <f:selectItems value="#{carSelectionBean.selectItemList}" 
+                   var="car"
+                   itemLabel="#{car.name} #{car.manufacturer}"
+                   itemValue="#{car.id}" />
+       </h:selectOneMenu>
+           <br></br>
+           <br></br>
+       <h:commandButton id="submit-button" value="Display" action="#{carSelectionBean.displayInfo}"/>
+       </h:form>
+    </h:body>
+</html>
+
