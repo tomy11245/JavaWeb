@@ -41,7 +41,7 @@ public class CarRepositoryBean {
         Car newCar2 = new Car();
         newCar2.setName("Altas");
         newCar2.setManufacturer("Toyota");
-        newCar2.setImg_uri("car/Toyota/Altas.png");
+        newCar2.setImg_uri("car/Toyota/Altas.jpg");
         this.create(newCar2);
     }
     

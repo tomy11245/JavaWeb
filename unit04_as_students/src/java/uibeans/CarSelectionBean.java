@@ -59,7 +59,7 @@ public class CarSelectionBean implements Serializable{
     }
     
     public String displayHome(){
-        return "index?faces-redirect=false";
+        return "index?faces-redirect=true";
     }
     
     public Car getDisplayCar() {
