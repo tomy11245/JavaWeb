@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Unit05 Assignment</title> 
+    </h:head>
+    <h:body>
+            <h:link value="Item 1" outcome="page1" /><br></br>
+            <h:link value="Item 2" outcome="page2" /><br></br>
+            <h:link value="Item 3" outcome="page3" /><br></br>
+            <h:form>
+            <h:commandButton id="submit-button" value="Show Info" action="#{adBean.showPage}">
+                <f:param name = "pageId" value = "#{adBean.pageId}" />
+             </h:commandButton>
+            </h:form>
+            <!--<img src="" id="image"/>-->
+            <c:if test="#{param['pageId']!=null}">
+            <h:graphicImage library="images" name="#{param['pageId']}.jpg"/>
+            </c:if>
+    </h:body>
+    <!--
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        changeImage();
+        function changeImage()
+        {
+            var itemId=QueryString("ItemID");
+            if(itemId){
+                var img = document.getElementById("image");
+                img.src="./resources/images/"+itemId+".jpg";
+            }
+            return false;
+        }
+
+        function QueryString(name) 
+        {
+                var AllVars = window.location.search.substring(1);
+                var Vars = AllVars.split("&");
+                for (i = 0; i < Vars.length; i++)
+                {
+                        var Var = Vars[i].split("=");
+                        if (Var[0] == name) return Var[1];
+                }
+                return "";
+        }
+        /* ]]> */
+    </script>
+    -->
+</html>
+
+
